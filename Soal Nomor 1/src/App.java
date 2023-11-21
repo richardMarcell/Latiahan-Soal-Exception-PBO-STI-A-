@@ -6,11 +6,11 @@ public class App {
 
     static void setValue(String kode, String nama, int jumlah, String gudangBarang, double hargaBeliBarang, double hargaJualBarang) throws MyException
     {
-        if(hargaJual < 1 ) {
+        if(hargaJualBarang < 1 ) {
              throw new MyException("Harga jual kurang dari 0 atau sama dengan 0");
         }
 
-        if (jumlahBarang < 1) {
+        if (jumlah < 1) {
             throw new MyException("Harus membeli minimal 1 barang");
         }
 
@@ -20,7 +20,7 @@ public class App {
         jumlahBarang = jumlah;
         hargaBeli = hargaBeliBarang;
         hargaJual = hargaJualBarang;
-        
+
         System.out.println("Kode Barang : " + kodeBarang + ", Nama Barang : " + namaBarang +",Gudang : " + gudang + ", ");
     }
     public static void main(String[] args) throws Exception {
